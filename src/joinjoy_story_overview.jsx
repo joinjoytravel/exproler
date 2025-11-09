@@ -136,16 +136,23 @@ export default function ExprolerPreview() {
         </p>
 
         <style>{`
-          .jj-grid { display:grid; grid-template-columns: 1fr; gap: 12px; }
-          @media (min-width: 520px) { .jj-grid { grid-template-columns: 1fr 1fr; } }
-          @media (min-width: 900px) { .jj-grid { grid-template-columns: 1fr 1fr 1fr; } }
-          .jj-card2 { border:1px solid #eee; border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.05); cursor:pointer; transition:transform .12s, box-shadow .12s; }
-          .jj-card2:hover { transform: translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,.08); }
-          .jj-thumb { width:100%; height:160px; object-fit:cover; display:block; }
-          .jj-body2 { padding:12px 14px 14px; }
-          .jj-title2 { font-weight:800; font-size:14px; margin:0 0 6px; color:#111827; }
-          .jj-desc2 { font-size:12.5px; color:#4b5563; line-height:1.55; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+          .jj-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+          @media (min-width: 400px) { .jj-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; } }
+          @media (min-width: 768px) { .jj-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; } }
+          @media (min-width: 1024px) { .jj-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
 
+          .jj-card2 { border:1px solid #eee; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,.05); cursor:pointer; transition:transform .12s, box-shadow .12s; }
+          .jj-card2:hover { transform: translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.08); }
+
+          .jj-thumb { width:100%; height:110px; object-fit:cover; display:block; }
+          @media (min-width: 400px) { .jj-thumb { height:120px; } }
+          @media (min-width: 768px) { .jj-thumb { height:140px; } }
+
+          .jj-body2 { padding:8px 10px 10px; }
+          .jj-title2 { font-weight:800; font-size:12.5px; margin:0 0 4px; color:#111827; }
+          .jj-desc2 { font-size:11.5px; color:#4b5563; line-height:1.45; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+          /* modal */
           .jj-modal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display:flex; align-items:center; justify-content:center; padding:16px; z-index: 60; }
           .jj-dialog { width: min(920px, 96vw); background:#fff; border-radius:18px; overflow:hidden; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
           .jj-top { position: relative; }
