@@ -202,15 +202,37 @@ export default function ExprolerPreview() {
   };
 
   const Footer = () => (
-    <Section>
-      <div style={{ textAlign: 'center', fontSize: 13, color: '#999', paddingTop: 10, borderTop: '1px solid #eee' }}>
-        © {new Date().getFullYear()} JoinJoy Krabi — Built with ❤️ by locals.<br/>
-        <a href='https://joinjoytravel.com/' style={{ display: 'inline-block', marginTop: 12, padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }}>
-          🌊 Go to Main Website
-        </a>
+  <Section>
+    <div style={{
+      textAlign: 'center',
+      fontSize: 13,
+      color: '#999',
+      paddingTop: 10,
+      borderTop: '1px solid #eee'
+    }}>
+      <a
+        href='https://joinjoytravel.com/'
+        style={{
+          display: 'inline-block',
+          marginTop: 12,
+          padding: '12px 22px',
+          borderRadius: 14,
+          color: '#fff',
+          textDecoration: 'none',
+          fontWeight: 800,
+          background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)',
+          boxShadow: '0 6px 16px rgba(236,72,153,.25)'
+        }}
+      >
+        🌊 Go to Main Website
+      </a>
+      <div style={{ marginTop: 12, color: '#999', fontSize: 13 }}>
+        © {new Date().getFullYear()} JoinJoy Krabi — Built with ❤️ by locals.
       </div>
-    </Section>
-  );
+    </div>
+  </Section>
+);
+
 
   return (
     <Container>
