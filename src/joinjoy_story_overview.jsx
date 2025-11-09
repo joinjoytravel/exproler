@@ -115,7 +115,7 @@ export default function ExprolerPreview() {
           -100 THB
         </div>
         <div style={{ color: '#6b7280', fontSize: 12, marginTop: 4 }}>Apply this code at checkout</div>
-        <div style={{ display: 'inline-block', marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>JOINJOYGO</div>
+        <div style={{ display: 'inline-block', marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>joinjoygo</div>
         <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }}>💙 Go to Main Website</a>
       </div>
     </Section>
@@ -135,35 +135,22 @@ export default function ExprolerPreview() {
           Built by locals in Krabi — see the whole journey first, then dive deeper.
         </p>
 
-        <style>{`
+       <style>{`
           .jj-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
-          @media (min-width: 400px) { .jj-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; } }
-          @media (min-width: 768px) { .jj-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; } }
-          @media (min-width: 1024px) { .jj-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+          @media (min-width: 520px) { .jj-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; } }
+          @media (min-width: 900px) { .jj-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; } }
+          @media (min-width: 1200px) { .jj-grid { grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; } }
 
           .jj-card2 { border:1px solid #eee; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,.05); cursor:pointer; transition:transform .12s, box-shadow .12s; }
           .jj-card2:hover { transform: translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.08); }
 
           .jj-thumb { width:100%; height:110px; object-fit:cover; display:block; }
-          @media (min-width: 400px) { .jj-thumb { height:120px; } }
-          @media (min-width: 768px) { .jj-thumb { height:140px; } }
+          @media (min-width: 520px) { .jj-thumb { height:120px; } }
+          @media (min-width: 900px) { .jj-thumb { height:140px; } }
 
           .jj-body2 { padding:8px 10px 10px; }
           .jj-title2 { font-weight:800; font-size:12.5px; margin:0 0 4px; color:#111827; }
           .jj-desc2 { font-size:11.5px; color:#4b5563; line-height:1.45; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-
-          /* modal */
-          .jj-modal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display:flex; align-items:center; justify-content:center; padding:16px; z-index: 60; }
-          .jj-dialog { width: min(920px, 96vw); background:#fff; border-radius:18px; overflow:hidden; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-          .jj-top { position: relative; }
-          .jj-hero { width:100%; max-height:58vh; object-fit:cover; display:block; }
-          .jj-close { position:absolute; top:10px; right:10px; width:38px; height:38px; border:0; border-radius:999px; background:rgba(255,255,255,.95); cursor:pointer; font-size:18px; font-weight:900; box-shadow:0 6px 14px rgba(0,0,0,.12); }
-          .jj-content { padding:16px 18px 18px; }
-          .jj-title3 { font-weight:900; font-size:16px; margin:0 0 8px; }
-          .jj-desc3 { font-size:14px; color:#374151; line-height:1.7; }
-          .jj-nav2 { display:flex; gap:8px; justify-content:space-between; margin-top:12px; }
-          .jj-btn2 { flex:1; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; background:#fff; font-weight:800; cursor:pointer; }
-          .jj-btn2.primary { background: linear-gradient(to right,#ec4899,#8b5cf6,#fb923c); color:#fff; border:0; }
         `}</style>
 
         <div className="jj-grid" role="list">
