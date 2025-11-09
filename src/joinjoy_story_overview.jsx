@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 /** =========================================================
  * JoinJoy — Story Overview (Production Version)
@@ -11,6 +11,36 @@ import React, { useState } from 'react';
  * ========================================================= */
 
 export default function ExprolerPreview() {
+
+  // ✅ Step: ดักการคลิกปุ่มเพื่อยิง Pixel Purchase
+  useEffect(() => {
+    const onClick = (e) => {
+      const el = e.target.closest(".jj-purchase");
+      if (!el) return;
+
+      const value = Number(el.dataset.value || "0");
+      const currency = el.dataset.currency || "THB";
+      const href = el.getAttribute("href") || el.dataset.href;
+
+      // ยิง Event Purchase
+      if (window.fbq) {
+        window.fbq("track", "Purchase", { value, currency });
+      }
+
+      // หน่วงให้ Pixel ยิงเสร็จก่อน redirect
+      if (href) {
+        e.preventDefault();
+        setTimeout(() => {
+          window.location.href = href;
+        }, 250);
+      }
+    };
+
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
+
+
   const designBoxes = [
     { img: "https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/1.png", title: "🌊 Starting Our Journey", text: "Krabi has many types of boats — but not all match what you see online. That’s why we handpick only trusted local boats that truly look like their photos. Our first choice: the 4 Islands Trip, the must-try experience in Ao Nang." },
     { img: "https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/2.png", title: "💸 Local Price You Can Trust", text: "We’re a Krabi-based platform — so our prices are truly local. If a date is shown, it’s available. Simple, honest, and ready to book." },
@@ -45,7 +75,10 @@ export default function ExprolerPreview() {
         <img src="https://raw.githubusercontent.com/BorbbangZar/joinjoytravel-assets/refs/heads/main/favicon.png" alt="JoinJoy Logo" style={{ width: 24, height: 24, borderRadius: 6 }} />
         <div style={{ fontWeight: 900, fontSize: 16 }}>JoinJoy • Krabi</div>
       </div>
-      <a href="https://joinjoytravel.com/" style={{ fontWeight: 800, textDecoration: 'none', color: '#7c3aed' }}>
+      <a href="https://joinjoytravel.com/" style={{ fontWeight: 800, textDecoration: 'none', color: '#7c3aed' }}
+        className="jj-purchase"
+        data-value="1"
+        data-currency="THB">
         Main Site ↗
       </a>
     </div>
@@ -70,7 +103,10 @@ export default function ExprolerPreview() {
       <p style={{ color: '#555', fontSize: 'clamp(14px,2vw,16px)', margin: '12px auto 18px', maxWidth: 560 }}>
         We make your 4-Islands trip easier, smoother, and more beautiful — powered by real local guides who truly care.
       </p>
-      <a href="https://joinjoytravel.com/" style={{ display: 'inline-block', padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }}>
+      <a href="https://joinjoytravel.com/" style={{ display: 'inline-block', padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
+        className="jj-purchase"
+        data-value="1"
+        data-currency="THB">
         🌊 Go to Main Website
       </a>
     </Section>
@@ -116,7 +152,10 @@ export default function ExprolerPreview() {
         <div style={{ display: 'inline-block', marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
           joinjoygo
         </div>
-        <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }}>
+        <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }} 
+        className="jj-purchase"
+        data-value="1"
+        data-currency="THB">
           💙 Go to Main Website
         </a>
       </div>
@@ -209,7 +248,9 @@ export default function ExprolerPreview() {
                 <p className="jj-desc3">{b.text}</p>
                 <div className="jj-nav2">
                   <button className="jj-btn2" onClick={() => setIdx((idx - 1 + designBoxes.length) % designBoxes.length)}>‹ Prev</button>
-                  <a className="jj-btn2 primary" href="https://joinjoytravel.com/" target="_blank" rel="noreferrer">Book with JoinJoy</a>
+                 <a className="jj-btn2 primary jj-purchase" href="https://joinjoytravel.com/" target="_blank" rel="noreferrer" data-value="1" data-currency="THB">
+                  Book with JoinJoy
+                </a>
                   <button className="jj-btn2" onClick={() => setIdx((idx + 1) % designBoxes.length)}>Next ›</button>
                 </div>
               </div>
@@ -243,6 +284,9 @@ export default function ExprolerPreview() {
           background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)',
           boxShadow: '0 6px 16px rgba(236,72,153,.25)'
         }}
+        className="jj-purchase"
+        data-value="1"
+        data-currency="THB"
       >
         🌊 Go to Main Website
       </a>
