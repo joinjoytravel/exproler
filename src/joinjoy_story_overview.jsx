@@ -173,8 +173,8 @@ export default function ExprolerPreview() {
           .jj-title3 { font-weight:900; font-size:16px; margin:0 0 8px; }
           .jj-desc3 { font-size:14px; color:#374151; line-height:1.7; }
           .jj-nav2 { display:flex; gap:8px; justify-content:space-between; margin-top:12px; }
-          .jj-btn2 { flex:1; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; background:#fff; font-weight:800; cursor:pointer; }
-          .jj-btn2.primary { background: linear-gradient(to right,#ec4899,#8b5cf6,#fb923c); color:#fff; border:0; }
+          .jj-btn2 { flex:1; padding:12px 14px; border-radius:12px; border:1px solid #e5e7eb; background:#fff; font-weight:800; cursor:pointer; text-decoration: none; }
+          .jj-btn2.primary { background: linear-gradient(to right,#ec4899,#8b5cf6,#fb923c); color:#fff; border:0; justify-content: center; text-align: center; }
         `}</style>
 
         {/* GRID OVERVIEW */}
