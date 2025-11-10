@@ -134,7 +134,7 @@ export default function ExprolerPreview() {
       ].map((f, i) => (
         <div key={i} style={{ border: '1px solid #eee', borderRadius: 12, padding: 12, marginBottom: 10, background: '#fff' }}>
           <b>{f.title}</b>
-          <p style={{ fontSize: 13, color: '#666', marginTop: 6 }}>{f.text}</p>
+          <p style={{ fontSize: 13, color: '#666', marginTop: 4 }}>{f.text}</p>
         </div>
       ))}
     </Section>
@@ -144,7 +144,8 @@ export default function ExprolerPreview() {
   const DiscountBox = () => (
     <Section>
       <div style={{ textAlign: 'center', border: '1px solid #eee', borderRadius: 20, background: 'linear-gradient(135deg,#fff0f7,#fff8f2,#ffffff)', padding: 20 }}>
-        <div style={{ color: '#374151', fontWeight: 'bold',fontSize: 18  }}>11.11 Special Discount — Only Today!</div>
+        <div style={{ color: '#374151', fontWeight: 'bold',fontSize: 18  }}>11.11 Special Discount</div>
+        <div style={{ color: '#d80808ff', fontWeight: 'bold',fontSize: 18  }}>Only Today!</div>
         <div style={{ marginTop: 6, fontSize: 30, fontWeight: 900, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
           Get 30% Off Now!
         </div>
