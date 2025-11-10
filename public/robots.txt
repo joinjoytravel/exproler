@@ -1,3 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to index the site
 User-agent: *
+Allow: /
 Disallow:
+
+# Sitemap (update this when live)
+Sitemap: https://joinjoytravel.github.io/exproler/sitemap.xml
