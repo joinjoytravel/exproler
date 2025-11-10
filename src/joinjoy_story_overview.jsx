@@ -144,12 +144,12 @@ export default function ExprolerPreview() {
   const DiscountBox = () => (
     <Section>
       <div style={{ textAlign: 'center', border: '1px solid #eee', borderRadius: 20, background: 'linear-gradient(135deg,#fff0f7,#fff8f2,#ffffff)', padding: 20 }}>
-        <div style={{ color: '#374151', fontSize: 14 }}>Special Offer for Ad Visitors</div>
+        <div style={{ color: '#374151', fontWeight: 'bold',fontSize: 18  }}>11.11 Special Discount — Only Today!</div>
         <div style={{ marginTop: 6, fontSize: 30, fontWeight: 900, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-          -100 THB
+          Get 30% Off Now!
         </div>
-        <div style={{ color: '#6b7280', fontSize: 12, marginTop: 4 }}>Apply this code at checkout</div>
-        <div style={{ display: 'inline-block', marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
+        <div style={{ color: '#6b7280', fontSize: 16, marginTop: 4 }}>Apply this code at checkout</div>
+        <div style={{ display: 'inline-block',fontSize: 22, marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
           joinjoygo
         </div>
         <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }} 
