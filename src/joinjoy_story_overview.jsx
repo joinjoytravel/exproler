@@ -303,9 +303,9 @@ export default function ExprolerPreview() {
   return (
     <Container>
       <TopBar />
+       <DiscountBox />
       <Hero />
       <WhyChoose />
-      <DiscountBox />
       <StoryOverview />
       <Footer />
     </Container>
