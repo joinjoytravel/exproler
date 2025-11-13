@@ -103,12 +103,7 @@ export default function ExprolerPreview() {
       <p style={{ color: '#555', fontSize: 'clamp(14px,2vw,16px)', margin: '12px auto 18px', maxWidth: 560 }}>
         We make your 4-Islands trip easier, smoother, and more beautiful — powered by real local guides who truly care.
       </p>
-      <a href="https://joinjoytravel.com/" style={{ display: 'inline-block', padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
-        className="jj-purchase"
-        data-value="1"
-        data-currency="THB">
-        🌊 Go to Main Website
-      </a>
+      
     </Section>
   );
 
@@ -137,6 +132,28 @@ export default function ExprolerPreview() {
           <p style={{ fontSize: 13, color: '#666', marginTop: 4 }}>{f.text}</p>
         </div>
       ))}
+     
+      <a href="https://joinjoytravel.com/" 
+       style={{
+    display: "block",
+    width: "fit-content",
+    margin: "0 auto",
+    padding: "12px 22px",
+    borderRadius: 14,
+    color: "#fff",
+    textDecoration: "none",
+    fontWeight: 800,
+    background:
+      "linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)",
+    boxShadow: "0 6px 16px rgba(236,72,153,.25)",
+  }}
+      //style={{ display: 'block', padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
+        className="jj-purchase"
+        data-value="1"
+        data-currency="THB">
+        🌊 Go to Main Website
+      </a>
+     
     </Section>
   );
 
@@ -153,10 +170,11 @@ export default function ExprolerPreview() {
           Limited codes available
         </div>
         <div style={{ color: '#6b7280', fontSize: 16, marginTop: 4 }}>Apply this code at checkout</div>
-        <div style={{ display: 'inline-block',fontSize: 22, marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
+        <div style={{ display: 'inline-block',fontSize: 22, marginTop: 8, padding: '8px 20px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
           joinjoygo
         </div>
-        <a href="https://joinjoytravel.com/" style={{ display: 'block',marginTop: 12, padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
+        <a href="https://joinjoytravel.com/" 
+     style={{ display: 'block',marginTop: 12, padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
       // <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }} 
         className="jj-purchase"
         data-value="1"
@@ -276,6 +294,7 @@ export default function ExprolerPreview() {
       paddingTop: 10,
       borderTop: '1px solid #eee'
     }}>
+      
       <a
         href='https://joinjoytravel.com/'
         style={{
