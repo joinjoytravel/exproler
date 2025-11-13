@@ -65,7 +65,7 @@ export default function ExprolerPreview() {
     </div>
   );
   const Section = ({ children, style }) => (
-    <div style={{ padding: '24px 16px', ...style }}>{children}</div>
+    <div style={{ padding: '16px 16px', ...style }}>{children}</div>
   );
 
   /* ───────── TopBar (non-sticky) ───────── */
@@ -98,7 +98,7 @@ export default function ExprolerPreview() {
 
   /* ───────── Hero ───────── */
   const Hero = () => (
-    <Section style={{ background: 'linear-gradient(to bottom,#fafafa,#ffffff)', textAlign: 'center', padding: '40px 20px' }}>
+    <Section style={{ background: 'linear-gradient(to bottom,#fafafa,#ffffff)', textAlign: 'center', padding: '10px 10px' }}>
       <GradientH1>JoinJoy<br />The Local Team from Krabi</GradientH1>
       <p style={{ color: '#555', fontSize: 'clamp(14px,2vw,16px)', margin: '12px auto 18px', maxWidth: 560 }}>
         We make your 4-Islands trip easier, smoother, and more beautiful — powered by real local guides who truly care.
@@ -132,7 +132,7 @@ export default function ExprolerPreview() {
           text: 'From food preferences to flexible pickups and shareable discount codes — everything is built around you.'
         }
       ].map((f, i) => (
-        <div key={i} style={{ border: '1px solid #eee', borderRadius: 12, padding: 12, marginBottom: 10, background: '#fff' }}>
+        <div key={i} style={{ border: '1px solid #eee', borderRadius: 12, padding: 12, marginBottom: 5, background: '#fff' }}>
           <b>{f.title}</b>
           <p style={{ fontSize: 13, color: '#666', marginTop: 4 }}>{f.text}</p>
         </div>
@@ -144,16 +144,20 @@ export default function ExprolerPreview() {
   const DiscountBox = () => (
     <Section>
       <div style={{ textAlign: 'center', border: '1px solid #eee', borderRadius: 20, background: 'linear-gradient(135deg,#fff0f7,#fff8f2,#ffffff)', padding: 20 }}>
-        <div style={{ color: '#374151', fontWeight: 'bold',fontSize: 18  }}>11.11 Special Discount</div>
-        <div style={{ color: '#d80808ff', fontWeight: 'bold',fontSize: 18  }}>Only Today!</div>
-        <div style={{ marginTop: 6, fontSize: 30, fontWeight: 900, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-          Get 30% Off Now!
+        <div style={{ color: '#374151', fontWeight: 'bold',fontSize: 18  }}>
+          🌴 Experience Krabi like a local
+        </div>
+        <div style={{ color: '#d80808ff', marginTop: 8, fontWeight: 'bold',fontSize: 18  }}>
+          Get 30% OFF until November 30!</div>
+        <div style={{ marginTop: 4, fontSize: 28, fontWeight: 900, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', WebkitBackgroundClip: 'text', color: 'transparent' }}>
+          Limited codes available
         </div>
         <div style={{ color: '#6b7280', fontSize: 16, marginTop: 4 }}>Apply this code at checkout</div>
         <div style={{ display: 'inline-block',fontSize: 22, marginTop: 8, padding: '8px 14px', borderRadius: 14, border: '2px dashed #f9a8d4', background: '#fff', color: '#db2777', fontWeight: 900, letterSpacing: 2 }}>
           joinjoygo
         </div>
-        <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }} 
+        <a href="https://joinjoytravel.com/" style={{ display: 'block',marginTop: 12, padding: '12px 22px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)', boxShadow: '0 6px 16px rgba(236,72,153,.25)' }} 
+      // <a href="https://joinjoytravel.com/" style={{ display: 'block', marginTop: 12, padding: '12px 16px', borderRadius: 14, color: '#fff', textDecoration: 'none', fontWeight: 800, background: 'linear-gradient(to right,#ec4899,#8b5cf6,#fb923c)' }} 
         className="jj-purchase"
         data-value="1"
         data-currency="THB">
